@@ -1,775 +1,241 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Destino Oculto | Descubre el significado de tu fecha de nacimiento</title>
-
-    <meta name="description" content="Descubre el significado simbólico de tu fecha de nacimiento con informes digitales personalizados de numerología y espiritualidad.">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background:
-                radial-gradient(circle at 50% 0%, #30205a 0%, #110d20 35%, #07060d 75%);
-            color: #f5f1ff;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* NAVBAR */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(7, 6, 13, 0.88);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        nav {
-            max-width: 1150px;
-            margin: auto;
-            padding: 18px 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            letter-spacing: 3px;
-        }
-
-        .logo span {
-            color: #c59cff;
-        }
-
-        .menu {
-            display: flex;
-            gap: 25px;
-            font-size: 14px;
-            color: #d8d0e7;
-        }
-
-        .menu a:hover {
-            color: #d39cff;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 80px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .moon {
-            position: absolute;
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 35% 30%, #ffffff, #d7c5ff 25%, #8961b9 55%, transparent 70%);
-            opacity: 0.15;
-            filter: blur(2px);
-            top: 50px;
-            right: -100px;
-        }
-
-        .hero-content {
-            max-width: 850px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .small-title {
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: #c89aff;
-            font-size: 13px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: clamp(42px, 7vw, 78px);
-            line-height: 1.05;
-            margin-bottom: 25px;
-        }
-
-        h1 span {
-            background: linear-gradient(90deg, #ffffff, #d7a6ff, #9f7cff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            max-width: 680px;
-            margin: auto;
-            color: #c9c2d8;
-            font-size: 18px;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 35px;
-            padding: 15px 30px;
-            border-radius: 50px;
-            background: linear-gradient(135deg, #9c5cff, #d69aff);
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 10px 35px rgba(156,92,255,0.3);
-            transition: 0.3s;
-        }
-
-        .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 45px rgba(156,92,255,0.45);
-        }
-
-        /* GENERAL */
-
-        section {
-            padding: 90px 20px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 38px;
-            margin-bottom: 12px;
-        }
-
-        .section-title p {
-            color: #aaa2b8;
-        }
-
-        /* PRODUCT */
-
-        .product {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .product-card {
-            background: linear-gradient(145deg, rgba(45,30,75,0.9), rgba(17,13,30,0.95));
-            border: 1px solid rgba(202,157,255,0.25);
-            border-radius: 25px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-
-        .product-icon {
-            font-size: 55px;
-            margin-bottom: 20px;
-        }
-
-        .product-card h3 {
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-
-        .price {
-            font-size: 38px;
-            font-weight: bold;
-            margin: 20px 0;
-            color: #d2a5ff;
-        }
-
-        .product-card ul {
-            list-style: none;
-            margin: 25px 0;
-        }
-
-        .product-card li {
-            margin: 12px 0;
-            color: #d5cedf;
-        }
-
-        .product-card li::before {
-            content: "✦";
-            color: #c08aff;
-            margin-right: 10px;
-        }
-
-        .product-text {
-            color: #c7c0d2;
-        }
-
-        .product-text h3 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        .product-text p {
-            margin-bottom: 20px;
-        }
-
-        /* STEPS */
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .step {
-            text-align: center;
-            padding: 35px 25px;
-            background: rgba(255,255,255,0.035);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 20px;
-        }
-
-        .number {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #8e52e8, #c89aff);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 20px;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .step h3 {
-            margin-bottom: 10px;
-        }
-
-        .step p {
-            color: #aaa2b8;
-            font-size: 15px;
-        }
-
-        /* FEATURES */
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .feature {
-            padding: 25px;
-            border-radius: 18px;
-            background: rgba(255,255,255,0.035);
-            border: 1px solid rgba(255,255,255,0.07);
-        }
-
-        .feature h3 {
-            margin-bottom: 8px;
-        }
-
-        .feature p {
-            color: #aaa2b8;
-            font-size: 15px;
-        }
-
-        /* FAQ */
-
-        .faq {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        details {
-            background: rgba(255,255,255,0.035);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 15px;
-            margin-bottom: 12px;
-            padding: 20px;
-        }
-
-        summary {
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        details p {
-            color: #aaa2b8;
-            margin-top: 15px;
-        }
-
-        /* NOTICE */
-
-        .notice {
-            max-width: 900px;
-            margin: auto;
-            padding: 30px;
-            border-radius: 20px;
-            background: rgba(126,78,190,0.1);
-            border: 1px solid rgba(194,145,255,0.2);
-            text-align: center;
-            color: #bdb4cc;
-            font-size: 14px;
-        }
-
-        /* CONTACT */
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact p {
-            color: #aaa2b8;
-        }
-
-        /* FOOTER */
-
-        footer {
-            border-top: 1px solid rgba(255,255,255,0.08);
-            padding: 35px 20px;
-            text-align: center;
-            color: #81798e;
-            font-size: 13px;
-        }
-
-        footer a {
-            color: #b995df;
-            margin: 0 8px;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 800px) {
-
-            .menu {
-                display: none;
-            }
-
-            .product {
-                grid-template-columns: 1fr;
-            }
-
-            .steps {
-                grid-template-columns: 1fr;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                min-height: 80vh;
-            }
-
-            section {
-                padding: 65px 20px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destino Oculto | Tu Código del Destino 2027</title>
+<meta name="description" content="Informe numerológico personalizado para 2027. Descubre tu Camino de Vida, amor, trabajo, dinero y tus doce meses.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 50% 0%,#30205a 0%,#110d20 35%,#07060d 75%);color:#f5f1ff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:1000;background:rgba(7,6,13,.9);border-bottom:1px solid #ffffff18}
+nav{max-width:1150px;margin:auto;padding:18px 25px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:21px;font-weight:bold;letter-spacing:3px}
+.logo span{color:#d4b275}
+.menu{display:flex;gap:25px;font-size:14px;color:#d8d0e7}
+.menu a:hover{color:#e7c887}
+section{padding:80px 20px}
+.container{max-width:1100px;margin:auto}
+.hero{min-height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.hero-content{max-width:850px;position:relative;z-index:2}
+.moon{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#d7c5ff 25%,#8961b9 55%,transparent 70%);opacity:.15;top:30px;right:-100px}
+.small-title{text-transform:uppercase;letter-spacing:4px;color:#d9b979;font-size:13px;margin-bottom:20px}
+h1{font-size:clamp(40px,7vw,75px);line-height:1.1;margin-bottom:25px}
+h1 span{color:#e4c585}
+.hero p{max-width:680px;margin:auto;color:#cbc4d8;font-size:18px}
+.button{display:inline-block;margin-top:30px;padding:16px 32px;border-radius:50px;background:linear-gradient(135deg,#b68b46,#e7c984);color:#18111f;font-weight:bold;box-shadow:0 10px 35px #0005;transition:.3s}
+.button:hover{transform:translateY(-3px)}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:clamp(28px,4vw,38px);margin-bottom:12px}
+.section-title p{color:#b9b0c8}
+.product{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.product-card{background:linear-gradient(145deg,#2d1e4be6,#110d1ef2);border:1px solid #d4b27555;border-radius:25px;padding:40px;box-shadow:0 20px 60px #0005}
+.product-icon{font-size:50px;color:#d4b275}
+.product-card h3,.product-text h3{font-size:29px;margin-bottom:15px}
+.price{font-size:40px;font-weight:bold;margin:20px 0;color:#e7c984}
+.product-card ul{list-style:none;margin:25px 0}
+.product-card li{margin:12px 0;color:#ded7e7}
+.product-card li::before{content:"✦";color:#d4b275;margin-right:10px}
+.product-text{color:#c7c0d2}
+.product-text p{margin-bottom:20px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.step{text-align:center;padding:35px 25px;background:#ffffff09;border:1px solid #ffffff18;border-radius:20px}
+.number{width:55px;height:55px;border-radius:50%;background:linear-gradient(135deg,#97703c,#d7b675);display:flex;justify-content:center;align-items:center;margin:0 auto 20px;font-weight:bold;color:#171020}
+.step h3{margin-bottom:10px}
+.step p,.feature p{color:#b6acc5;font-size:15px}
+.features{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.feature{padding:25px;border-radius:18px;background:#ffffff09;border:1px solid #ffffff18}
+.feature h3{margin-bottom:8px}
+.faq{max-width:800px;margin:auto}
+details{background:#ffffff09;border:1px solid #ffffff18;border-radius:15px;margin-bottom:12px;padding:20px}
+summary{cursor:pointer;font-weight:bold}
+details p{color:#b6acc5;margin-top:15px}
+.notice{max-width:900px;margin:auto;padding:30px;border-radius:20px;background:#7e4ebe19;border:1px solid #c291ff33;text-align:center;color:#c4bbd0;font-size:14px}
+.contact{text-align:center}
+.contact p{color:#b6acc5}
+footer{border-top:1px solid #ffffff18;padding:35px 20px;text-align:center;color:#9990a6;font-size:13px}
+footer a{color:#d4b275;margin:0 8px}
+@media(max-width:800px){
+.menu{display:none}
+.product,.steps,.features{grid-template-columns:1fr}
+section{padding:65px 20px}
+.hero{min-height:75vh}
+.product-card{padding:25px}
+}
+</style>
 </head>
 
 <body>
-
 <header>
-    <nav>
-        <div class="logo">DESTINO <span>OCULTO</span></div>
-
-        <div class="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#producto">Producto</a>
-            <a href="#como">Cómo funciona</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contacto">Contacto</a>
-        </div>
-    </nav>
+<nav>
+<div class="logo">DESTINO <span>OCULTO</span></div>
+<div class="menu">
+<a href="#inicio">Inicio</a>
+<a href="#producto">Producto</a>
+<a href="#como">Cómo funciona</a>
+<a href="#faq">Preguntas frecuentes</a>
+<a href="#contacto">Contacto</a>
+</div>
+</nav>
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero" id="inicio">
-
-    <div class="moon"></div>
-
-    <div class="hero-content">
-
-        <div class="small-title">
-            Numerología · Espiritualidad · Reflexión
-        </div>
-
-        <h1>
-            Descubre el significado simbólico de
-            <span>tu fecha de nacimiento</span>
-        </h1>
-
-        <p>
-            Explora los números y símbolos asociados a tu fecha de nacimiento
-            mediante una lectura digital personalizada creada especialmente para ti.
-        </p>
-        <a href="https://buy.stripe.com/8x2aEX8GF9z33i28YY3Je00" class="button">
-    Descubrir mi lectura
-</a>
-
-
-    </div>
-
+<div class="moon"></div>
+<div class="hero-content">
+<div class="small-title">Numerología · Autoconocimiento · 2027</div>
+<h1>DESCUBRE <span>TU CÓDIGO DEL DESTINO 2027</span></h1>
+<p>Una experiencia numerológica personalizada para explorar los símbolos de tu fecha de nacimiento y reflexionar sobre el amor, el trabajo, el dinero y tu próximo año.</p>
+<a href="https://buy.stripe.com/fZu6oH7CB12xf0Ka323Je01" class="button">Descubrir mi destino · 9,90 €</a>
+</div>
 </section>
-
-
-<!-- PRODUCTO -->
 
 <section id="producto">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Tu Código del Destino 2027</h2>
-            <p>Una lectura digital personalizada para explorar tu próximo ciclo.</p>
-        </div>
-
-        <div class="product">
-
-            <div class="product-card">
-
-                <div class="product-icon">✦</div>
-
-                <h3>Tu Código del Destino 2027</h3>
-
-                <p>
-                    Informe digital personalizado basado en tu nombre
-                    y fecha de nacimiento.
-                </p>
-
-                <div class="price">
-                    9,90 €
-                </div>
-
-                <ul>
-                    <li>Tu número simbólico principal</li>
-                    <li>Interpretación de tu fecha de nacimiento</li>
-                    <li>Temas de personalidad y ciclos</li>
-                    <li>Lectura simbólica de 2027</li>
-                    <li>Meses y momentos para la reflexión</li>
-                    <li>Símbolos, colores y afirmaciones</li>
-                    <li>Informe digital personalizado en PDF</li>
-                </ul>
-
-                
-                <a href="https://buy.stripe.com/8x2aEX8GF9z33i28YY3Je00" class="button">
-                        Comprar por 9,90 €
-                      </a>
-
-
-            </div>
-
-
-            <div class="product-text">
-
-                <h3>Una lectura creada para ti</h3>
-
-                <p>
-                    Tu fecha de nacimiento contiene una combinación única
-                    de números. En Destino Oculto utilizamos la numerología
-                    como herramienta simbólica para ayudarte a reflexionar
-                    sobre diferentes aspectos de tu vida.
-                </p>
-
-                <p>
-                    Recibirás un informe digital preparado a partir de los
-                    datos que introduzcas durante el proceso de compra.
-                </p>
-
-                <p>
-                    El objetivo no es decirte exactamente qué ocurrirá,
-                    sino ofrecerte una experiencia de reflexión personal
-                    y entretenimiento.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<div class="container">
+<div class="section-title">
+<h2>Tu Código del Destino 2027</h2>
+<p>Un informe digital personalizado creado especialmente para ti.</p>
+</div>
+<div class="product">
+<div class="product-card">
+<div class="product-icon">✦</div>
+<h3>Tu informe personal</h3>
+<p>Una lectura simbólica basada en tu nombre y fecha de nacimiento.</p>
+<div class="price">9,90 €</div>
+<ul>
+<li>Mapa numerológico personalizado</li>
+<li>Tu Camino de Vida y Año Personal</li>
+<li>Amor y relaciones</li>
+<li>Trabajo, talentos y oportunidades</li>
+<li>Dinero y hábitos financieros</li>
+<li>Interpretación de los 12 meses de 2027</li>
+<li>Seis rituales simbólicos</li>
+<li>Informe digital en PDF</li>
+</ul>
+<a href="https://buy.stripe.com/fZu6oH7CB12xf0Ka323Je01" class="button">Comprar por 9,90 €</a>
+</div>
+<div class="product-text">
+<h3>Una lectura creada para ti</h3>
+<p>Los números de tu fecha de nacimiento pueden interpretarse como símbolos de personalidad, ciclos y momentos de reflexión.</p>
+<p>Destino Oculto combina numerología y contenido personalizado para ofrecerte una experiencia visual y espiritual inspirada en el año 2027.</p>
+<p>No se trata de predecir acontecimientos con certeza, sino de explorar posibilidades simbólicas desde una perspectiva de autoconocimiento y entretenimiento.</p>
+</div>
+</div>
+</div>
 </section>
-
-
-<!-- COMO FUNCIONA -->
 
 <section id="como">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>¿Cómo funciona?</h2>
-            <p>Simple, rápido y completamente digital.</p>
-        </div>
-
-        <div class="steps">
-
-            <div class="step">
-
-                <div class="number">1</div>
-
-                <h3>Realiza tu compra</h3>
-
-                <p>
-                    Selecciona la lectura que quieres recibir.
-                </p>
-
-            </div>
-
-            <div class="step">
-
-                <div class="number">2</div>
-
-                <h3>Introduce tus datos</h3>
-
-                <p>
-                    Indica tu nombre, fecha de nacimiento y correo electrónico.
-                </p>
-
-            </div>
-
-            <div class="step">
-
-                <div class="number">3</div>
-
-                <h3>Recibe tu informe</h3>
-
-                <p>
-                    Recibirás tu lectura digital personalizada en formato PDF.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<div class="container">
+<div class="section-title">
+<h2>¿Cómo funciona?</h2>
+<p>Tres pasos sencillos.</p>
+</div>
+<div class="steps">
+<div class="step">
+<div class="number">1</div>
+<h3>Realiza tu compra</h3>
+<p>Accede al pago seguro de Stripe.</p>
+</div>
+<div class="step">
+<div class="number">2</div>
+<h3>Introduce tus datos</h3>
+<p>Facilita tu nombre, fecha de nacimiento y correo electrónico.</p>
+</div>
+<div class="step">
+<div class="number">3</div>
+<h3>Recibe tu PDF</h3>
+<p>El informe personalizado se enviará a tu correo electrónico.</p>
+</div>
+</div>
+</div>
 </section>
-
-
-<!-- CONTENIDO -->
 
 <section>
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>¿Qué encontrarás?</h2>
-
-            <p>
-                Una experiencia diseñada para conocerte desde otra perspectiva.
-            </p>
-
-        </div>
-
-        <div class="features">
-
-            <div class="feature">
-                <h3>✦ Tu número personal</h3>
-                <p>
-                    Descubre el significado simbólico de los números
-                    relacionados con tu fecha de nacimiento.
-                </p>
-            </div>
-
-            <div class="feature">
-                <h3>☾ Tu energía simbólica</h3>
-                <p>
-                    Una interpretación relacionada con personalidad,
-                    emociones y ciclos.
-                </p>
-            </div>
-
-            <div class="feature">
-                <h3>✧ Tu ciclo 2027</h3>
-                <p>
-                    Explora los temas simbólicos asociados al año 2027.
-                </p>
-            </div>
-
-            <div class="feature">
-                <h3>◇ Afirmaciones</h3>
-                <p>
-                    Frases y ejercicios simbólicos para acompañar
-                    tus momentos de reflexión.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
+<div class="container">
+<div class="section-title">
+<h2>¿Qué descubrirás?</h2>
+<p>Un recorrido simbólico por las distintas áreas de tu vida.</p>
+</div>
+<div class="features">
+<div class="feature">
+<h3>✦ Tu Camino de Vida</h3>
+<p>Conoce el significado numerológico de tu fecha de nacimiento.</p>
+</div>
+<div class="feature">
+<h3>☾ Amor y relaciones</h3>
+<p>Explora tus fortalezas, necesidades y dinámicas afectivas.</p>
+</div>
+<div class="feature">
+<h3>✧ Trabajo y dinero</h3>
+<p>Reflexiona sobre tus talentos, objetivos y hábitos económicos.</p>
+</div>
+<div class="feature">
+<h3>◇ Tus 12 meses y rituales</h3>
+<p>Descubre las interpretaciones mensuales de 2027 y seis prácticas simbólicas.</p>
+</div>
+</div>
+</div>
 </section>
-
-
-<!-- AVISO -->
 
 <section>
-
-    <div class="container">
-
-        <div class="notice">
-
-            <strong>Importante</strong><br><br>
-
-            Destino Oculto ofrece contenido de entretenimiento,
-            numerología y reflexión personal.
-
-            Las interpretaciones son simbólicas y no constituyen
-            predicciones garantizadas ni asesoramiento médico,
-            psicológico, jurídico o financiero.
-
-            No garantizamos acontecimientos futuros ni resultados concretos.
-
-        </div>
-
-    </div>
-
+<div class="container">
+<div class="notice">
+<strong>Información importante</strong>
+<p>Destino Oculto ofrece numerología y contenido simbólico para entretenimiento y reflexión personal. No garantiza acontecimientos futuros ni sustituye asesoramiento médico, psicológico, jurídico o financiero.</p>
+</div>
+</div>
 </section>
-
-
-<!-- FAQ -->
 
 <section id="faq">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>Preguntas frecuentes</h2>
-
-        </div>
-
-        <div class="faq">
-
-            <details>
-                <summary>¿Qué recibiré?</summary>
-
-                <p>
-                    Recibirás un informe digital personalizado en formato PDF.
-                </p>
-            </details>
-
-
-            <details>
-                <summary>¿Qué datos necesito proporcionar?</summary>
-
-                <p>
-                    Para realizar la lectura necesitaremos tu nombre,
-                    fecha de nacimiento y una dirección de correo electrónico
-                    para enviarte el resultado.
-                </p>
-            </details>
-
-
-            <details>
-                <summary>¿La lectura predice el futuro?</summary>
-
-                <p>
-                    No. El contenido tiene carácter simbólico y de entretenimiento.
-                    Se utiliza como herramienta de reflexión personal.
-                </p>
-            </details>
-
-
-            <details>
-                <summary>¿Cuándo recibiré mi informe?</summary>
-
-                <p>
-                    El informe será enviado digitalmente al correo electrónico
-                    utilizado durante el proceso de compra.
-                </p>
-            </details>
-
-
-            <details>
-                <summary>¿Mis datos están protegidos?</summary>
-
-                <p>
-                    Solo utilizaremos los datos necesarios para gestionar
-                    el pedido y entregar el producto digital, de acuerdo
-                    con nuestra política de privacidad.
-                </p>
-            </details>
-
-        </div>
-
-    </div>
-
+<div class="container">
+<div class="section-title">
+<h2>Preguntas frecuentes</h2>
+</div>
+<div class="faq">
+<details>
+<summary>¿Qué recibiré?</summary>
+<p>Un informe numerológico personalizado en formato PDF con diferentes capítulos sobre tu año 2027.</p>
+</details>
+<details>
+<summary>¿Qué datos necesito proporcionar?</summary>
+<p>Tu nombre, fecha de nacimiento y correo electrónico para preparar y entregar el informe.</p>
+</details>
+<details>
+<summary>¿La numerología predice el futuro?</summary>
+<p>No. Las interpretaciones son simbólicas y están destinadas al entretenimiento y la reflexión personal.</p>
+</details>
+<details>
+<summary>¿Cuándo recibiré el informe?</summary>
+<p>El PDF se enviará por correo electrónico una vez que el pedido se procese correctamente.</p>
+</details>
+<details>
+<summary>¿Es un pago único?</summary>
+<p>El producto tiene un precio de 9,90 € mediante pago único.</p>
+</details>
+</div>
+</div>
 </section>
-
-
-<!-- CONTACTO -->
 
 <section id="contacto">
-
-    <div class="container contact">
-
-        <div class="section-title">
-
-            <h2>Contacto</h2>
-
-            <p>
-                ¿Tienes alguna pregunta sobre Destino Oculto?
-            </p>
-
-        </div>
-
-        <!-- CAMBIA TU_EMAIL POR TU CORREO REAL -->
-
-        <a href="graftstudioweb@gmail.com" class="button">
-            Contactar
-        </a>
-
-    </div>
-
+<div class="container contact">
+<div class="section-title">
+<h2>Contacto</h2>
+<p>¿Tienes alguna pregunta sobre Destino Oculto?</p>
+</div>
+<a href="mailto:graftstudioweb@gmail.com" class="button">Contactar por correo</a>
+</div>
 </section>
 
-
-<!-- FOOTER -->
-
 <footer>
-
-    <div>
-        © 2026 Destino Oculto. Todos los derechos reservados.
-    </div>
-
-    <br>
-
-    <a href="#inicio">Inicio</a>
-    <a href="#producto">Producto</a>
-    <a href="#faq">FAQ</a>
-
+<p>© 2026 Destino Oculto. Todos los derechos reservados.</p>
+<p>
+<a href="#inicio">Inicio</a>
+<a href="#producto">Producto</a>
+<a href="#faq">Preguntas frecuentes</a>
+</p>
 </footer>
-
 </body>
 </html>
